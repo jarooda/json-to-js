@@ -11,16 +11,11 @@ const alertType = ref<string>('')
 const isUsingSingleQuote = ref<boolean>(true)
 const space = ref<number>(2)
 
-// @ts-ignore
-const replacer = (key, value) => {
-  return value
-}
-
 const convert = () => {
   try {
     alertType.value = ''
     const parsed = JSON.parse(baseModel.value)
-    const stringify = JSON.stringify(parsed, replacer, space.value)
+    const stringify = JSON.stringify(parsed, null, space.value)
 
     // remove doublequote from properties
     let unquote = stringify.replace(/"([^"]+)":/g, '$1:')
