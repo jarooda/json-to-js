@@ -8,7 +8,7 @@ const baseModel = ref<string>('')
 const resultModel = ref<string>('')
 const alertText = ref<string>('')
 const alertType = ref<string>('')
-const isUsingDoubleQuote = ref<boolean>(true)
+const isUsingSingleQuote = ref<boolean>(true)
 const space = ref<number>(2)
 
 // @ts-ignore
@@ -25,7 +25,7 @@ const convert = () => {
     // remove doublequote from properties
     let unquote = stringify.replace(/"([^"]+)":/g, '$1:')
 
-    if (isUsingDoubleQuote.value) {
+    if (isUsingSingleQuote.value) {
       // change " to '
       unquote = unquote.replace(/\"/g, "'")
     }
@@ -67,7 +67,7 @@ const copyToClipboard = () => {
         <input id="indent" type="number" v-model="space" class="input-indent" />
       </div>
       <label for="doubletick" class="mt-8">
-        <input id="doubletick" v-model="isUsingDoubleQuote" type="checkbox" />
+        <input id="doubletick" v-model="isUsingSingleQuote" type="checkbox" />
         Convert Doublequote (") to Singlequote (') ?
       </label>
       <base-button
@@ -79,7 +79,7 @@ const copyToClipboard = () => {
         Convert
       </base-button>
       <base-button
-        id="convert-text"
+        id="copy-text"
         class="mt-8"
         block
         :disabled="!resultModel"
