@@ -97,7 +97,7 @@ const copyToClipboard = () => {
   </main>
   <footer class="mt-16">
     <p class="text-align-center">JSON to Javascript converter by <a class="author" href="https://www.jaluwibowo.id/">Jalu Wibowo Aji</a></p>
-    <p class="text-align-center"><a href="">Source Code</a></p>
+    <p class="text-align-center"><a href="https://github.com/jarooda/json-to-js">Source Code</a></p>
   </footer>
 </template>
 
