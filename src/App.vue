@@ -13,7 +13,7 @@ const quoteType = ref<string>('double')
 const caseType = ref<string>('')
 const space = ref<number>(2)
 
-function changeCase(obj, caseType) {
+function changeCase(obj: any, caseType: string) {
   const keys = Object.keys(obj);
 
   for (const key of keys) {
@@ -46,7 +46,7 @@ function changeCase(obj, caseType) {
   return obj;
 }
 
-function recursiveIterate(obj, caseType) {
+function recursiveIterate(obj: any, caseType: string) {
   changeCase(obj, caseType);
 }
 
