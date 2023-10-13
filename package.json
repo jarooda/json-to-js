@@ -9,6 +9,7 @@
     "type-check": "vue-tsc --noEmit"
   },
   "dependencies": {
+    "change-case": "^5.0.2",
     "vue": "^3.2.37"
   },
   "devDependencies": {
