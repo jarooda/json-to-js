@@ -81,33 +81,6 @@ const copyToClipboard = () => {
     alertType.value = 'error'
   })
 }
-
-/**
-
-
-{
-  "key": "value",
-  "key space": "value",
-  "key-kebab": "value",
-  "key value": {
-    "key": "value",
-    "key space": "value",
-    "key-kebab": "value"
-  },
-  "key array": [ "value", "value", "value" ],
-  "key array object": [ { "key": "value" }, { "key": "value" }, { "key": "value" } ],
-  "key array object array": [ { "key": "value" }, { "key": "value" }, { "key": "value" } ],
-  "key array object array object": [ { "key": "value" }, { "key": "value" }, { "key": "value" } ],
-  "key array object array object array": [ { "key": {
-    "key array object array object array": [ { "key": {
-    "key array object array object array": [ { "key": {
-    "array": [1,2,3]
-  } }, { "key": "value" }, { "key": "value" } ]
-  } }, { "key": "value" }, { "key": "value" } ]
-  } }, { "key": "value" }, { "key": "value" } ]
-}
-
- */
 </script>
 
 <template>
