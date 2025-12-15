@@ -1,9 +1,13 @@
 <script setup lang="ts">
-import { camelCase, constantCase, kebabCase, pascalCase, snakeCase } from 'change-case'
+import { camelCase, kebabCase, snakeCase, capitalize } from 'jalutils'
 import BaseButton from '@/components/BaseButton.vue'
 import BaseAlert from '@/components/BaseAlert.vue'
 
 import { ref } from 'vue'
+
+// Helper functions for missing case types
+const pascalCase = (str: string) => capitalize(camelCase(str))
+const constantCase = (str: string) => snakeCase(str).toUpperCase()
 
 const baseModel = ref<string>('')
 const resultModel = ref<string>('')
